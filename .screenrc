@@ -1,0 +1,12 @@
+startup_message off
+#backtick 1 5 5 /usr/bin/tail -1 /home/afeid/opt/var/stats.txt
+#caption always '%{= kG}%?%-Lw%=%1`%+Lw%?%='
+caption splitonly '%{= kw}|%=%1`%=|'
+#caption always '%?%F%{R.}%?%3n %t%? [%h]%?'
+#caption always '%50=%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<'
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+termcapinfo xterm*|Eterm|mlterm "hs:ts=\E]0;:fs=\007:ds=\E]0;screen\007"
+
+defhstatus "screen ^E (^Et) | $USER@^EH"
+#hardstatus off
