@@ -86,3 +86,7 @@ set expandtab
 " colorscheme ir_black
 set bg=dark
 set autoindent
+
+" custom mappings
+nmap ` :NERDTreeToggle<CR>
+cmap w!! w !sudo tee % >/dev/null
