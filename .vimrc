@@ -90,3 +90,32 @@ set autoindent
 " custom mappings
 nmap ` :NERDTreeToggle<CR>
 cmap w!! w !sudo tee % >/dev/null
+
+" shortcuts for buffer movement
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+
+" Shortcut to rapidly toggle set paste
+set pastetoggle=<leader>p
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:
+
+" map buffers since I use them a lot
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+
+" color white space that shouldn't exist
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+
+" Show trailing whitespace and spaces before a tab:
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" Show tabs that are not at the start of a line:
+match ExtraWhitespace /[^\t]\zs\t\+/
+
+" Show trailing whitespace:
+match ExtraWhitespace /\s\+$/
