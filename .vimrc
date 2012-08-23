@@ -91,10 +91,6 @@ set autoindent
 nmap ` :NERDTreeToggle<CR>
 cmap w!! w !sudo tee % >/dev/null
 
-" shortcuts for buffer movement
-nmap <C-h> :bp<CR>
-nmap <C-l> :bn<CR>
-
 " Shortcut to rapidly toggle set paste
 set pastetoggle=<leader>p
 
